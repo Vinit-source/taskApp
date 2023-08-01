@@ -1,2 +1,8 @@
+C:\Users\VinitGore\Documents\eclipse-workspace\taskApp\src\main\java\taskApp\validation\exceptions\InvalidUserException.java
+C:\Users\VinitGore\Documents\eclipse-workspace\taskApp\src\main\java\taskApp\services\UserService.java
 C:\Users\VinitGore\Documents\eclipse-workspace\taskApp\src\main\java\taskApp\App.java
-C:\Users\VinitGore\Documents\eclipse-workspace\taskApp\src\main\java\taskApp\User.java
+C:\Users\VinitGore\Documents\eclipse-workspace\taskApp\src\main\java\taskApp\dao\exceptions\DAOException.java
+C:\Users\VinitGore\Documents\eclipse-workspace\taskApp\src\main\java\taskApp\model\User.java
+C:\Users\VinitGore\Documents\eclipse-workspace\taskApp\src\main\java\taskApp\validation\UserValidator.java
+C:\Users\VinitGore\Documents\eclipse-workspace\taskApp\src\main\java\taskApp\dao\UserDAO.java
+C:\Users\VinitGore\Documents\eclipse-workspace\taskApp\src\main\java\taskApp\services\exceptions\ServiceException.java

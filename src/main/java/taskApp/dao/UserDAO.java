@@ -8,8 +8,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import taskApp.model.User;
 
+import taskApp.model.User;
+import taskApp.dao.exceptions.*;
 /**
  * @author Vinit Gore
  *
@@ -22,18 +23,19 @@ public class UserDAO {
 		}
 
 		// Get user from DB - Login
-		public boolean login(String email, String password) {
-			
-		}
+//		public boolean login(String email, String password) {
+//			
+//		}
 
 		// Add new user to DB - Register
-		public boolean register(User user) throws SQLException {
+		public boolean createUser(User user) throws DAOException {
+			String insertQuery = "INSERT INTO user (email, username, password) VALUES (?, ?, ?)";
+			try (
 			// Get Connection
 			Connection connection = getConnection();
 			
 			// Prepare SQL statement
-			String insertQuery = "INSERT INTO user (email, username, password) VALUES (?, ?, ?)";
-			PreparedStatement pst = connection.prepareStatement(insertQuery);
+			PreparedStatement pst = connection.prepareStatement(insertQuery);) {
 			pst.setString(1, user.getEmail());
 			pst.setString(2, user.getUsername());
 			pst.setString(3, user.getPassword());
@@ -43,5 +45,8 @@ public class UserDAO {
 			
 			// Return successful or not
 			return (rows == 1);
+			} catch (SQLException e) {
+				throw new DAOException(e);
+			}
 		}
 }
